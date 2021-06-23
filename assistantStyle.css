@@ -1,0 +1,213 @@
+ #overlay {
+    background: #000000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+img {
+    position: absolute;
+    left: -135%;
+    width: 200px;
+    transform: translate(-50%, -50%);
+}
+#one    {
+    top: 10%;  
+}
+#two   {
+    top: 40%;  
+}
+.container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.circle{
+    border-radius: 50%;
+}
+
+.bg{
+    width: 300px;
+    height: 300px;
+    background: #000;
+    border: solid 5px #0088ff;
+}
+
+.outermost{
+    width: 255px;
+    height: 255px;
+    border: solid 10px rgba(0, 0, 0, 0);
+    border-bottom: solid 10px #0088ff;
+    border-left: solid 10px #0088ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 5s linear infinite;
+}  
+.outer {
+    width: 250px;
+    height: 250px;
+    border: solid 5px #0088ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 5s linear infinite;
+}
+.middle {
+    width: 215px;
+    height: 215px;
+    border: solid 12px rgba(0, 0, 0, 0);
+    border-bottom: solid 12px #005aa8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: spin2 3.5s linear infinite reverse;
+} 
+.middle2 {
+    width: 215px;
+    height: 215px;
+    border: solid 6px rgba(0, 0, 0, 0); 
+    border-top: solid 6px #005aa8; 
+    border-right: solid 6px #005aa8; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 3.5s linear infinite reverse;
+} 
+.middle3 {
+    width: 205px;
+    height: 205px;
+    border: solid 30px rgba(0, 0, 0, 0);
+    border-top: solid 30px #0088ff4b;
+    border-right: solid 30px #0088ff4b;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 3.5s linear infinite reverse;
+}
+.inner {
+    width: 140px;
+    height: 140px;
+    border: solid 5px #0088ff;
+    border-bottom: solid 5px #00000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: spin2 2s linear infinite;
+}
+
+.innermost3 {
+    width: 35px;
+    height: 35px;
+    background: #0088ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.innermost2 {
+    width: 80px;
+    height: 80px;
+    border: solid 13px #0088ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.innermost  {
+    width: 115px;
+    height: 115px;
+    border: solid 13px #0088ff;
+    border-top: solid 13px #00000000;
+    border-bottom: solid 13px #00000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 1s linear infinite reverse;
+}
+@keyframes spin {
+    0%  {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%    {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+@keyframes spin2 {
+    0%  {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    100%    {
+        transform: translate(-50%, -50%) rotate(405deg);
+    }
+}
+#name   {
+    letter-spacing: 2px;
+    color: #ffffff;
+    position: absolute;
+    top: 46.5%;
+    left: 50%;
+    font-size: 18px; 
+    transform: translate(-50%, -50%);
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+#status {
+    letter-spacing: 3px;
+    color: #0088ff;
+    position: absolute;
+    top: -55%;
+    left: -120%;
+    transform: translate(-50%, -50%);
+}
+#microphoneButton    {
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #dbdbdb;
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+#microphoneButton.listen {
+    background-color: red;
+}
+#microphoneButton.listen #Mic{
+    fill: #ffffff;
+
+}
+#Mic    {
+    width: 80px;
+    height: 80px;
+}
+#date   {
+    position: absolute;
+    color: #ffffff;
+    top: 33%;
+    left: -135%;
+    transform: translate(-50%, -50%);
+}
+#time   {
+    position: absolute;
+    color: #ffffff;
+    top: 5%;
+    left: -135%;
+    font-size: 25px;
+    -webkit-box-reflect: below-webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
+    transform: translate(-50%, -50%);
+}
+
