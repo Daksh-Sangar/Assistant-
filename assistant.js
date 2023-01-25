@@ -5,10 +5,10 @@ var time = day.toLocaleTimeString();
 
 function Startup()
 {
-    // Speak("Initilazing System, Up and running. Welocme, sir");
     document.getElementById("date").innerHTML = today.toLocaleDateString();
     document.getElementById("time").innerHTML = time;
 }
+
 Startup();   
 
 var UpdateTime = setInterval(myTimer ,1000);
@@ -19,11 +19,12 @@ function myTimer() {
 
 function StartListening()
 {
-    const recog = new speechRecognition;
+    const recog = new speechRecognition();
     recog.start();
     recog.onstart = microphoneButton.classList.add('listen');
 
     recog.onresult = function (data) {
+        //'data' comes from 'onresult' 
         microphoneButton.classList.remove('listen');
         handleResults(data)
     };
@@ -83,10 +84,6 @@ function handleResults(data)
     else if (text.includes('what'||'whats') && text.includes('time'))
     {
         Speak(time);
-    }
-    else if(text.includes())
-    {
-        
     }
     else {
         Speak("I CANT do that");
